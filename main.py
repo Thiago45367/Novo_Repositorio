@@ -41,9 +41,15 @@ Base.metadata.create_all(bind=db)
 
 # Salvar no banco de dados.
 # usuario = Usuario("Marta", "marta@gmail.com", "123").
-aluno = Aluno(senha="123", nome="Marta", email="marta@gmail.com", ra="568565")
-session.add(aluno)
-session.commit()
+# aluno = Aluno(senha="123", nome="Marta", email="marta@gmail.com", ra="568565")
+# session.add(aluno)
+# session.commit()
+
+for i in range(2):
+    ra = input("Digita seu R.A.")
+    nome = input("Digite seu nome")
+    idade = input("Digita sua idade")
+    email = input("Digita seu email")
 
 # Mostrando contéudo do banco de dados.
 lista_alunos = session.query(Aluno).all()
