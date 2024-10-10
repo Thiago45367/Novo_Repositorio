@@ -41,7 +41,7 @@ Base.metadata.create_all(bind=db)
 
 # Salvar no banco de dados.
 # usuario = Usuario("Marta", "marta@gmail.com", "123").
-aluno = Aluno(senha="123", nome="Marta", email="marta@gmail.com")
+aluno = Aluno(senha="123", nome="Marta", email="marta@gmail.com", ra="568565")
 session.add(aluno)
 session.commit()
 
