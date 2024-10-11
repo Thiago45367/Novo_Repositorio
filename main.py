@@ -46,10 +46,10 @@ Base.metadata.create_all(bind=db)
 # session.commit()
 
 for i in range(2):
-    ra = input("Digita seu R.A.")
-    nome = input("Digite seu nome")
-    idade = input("Digita sua idade")
-    email = input("Digita seu email")
+    ra = input("\nDigita seu R.A.")
+    nome = input("\nDigite seu nome")
+    idade = input("\nDigita sua idade")
+    email = input("\nDigita seu email")
 
 # Mostrando contéudo do banco de dados.
 lista_alunos = session.query(Aluno).all()
@@ -66,9 +66,9 @@ session.commit()
 print("\nEmail apagado com sucesso!")
 
 # Atualiar um usuário.
-print("\nAtualizando os dados de um usuário: ")
+print("\nAtualizando os dados de um aluno: ")
 
-email_aluno = input("Informe o email do usaúrio: ")
+email_aluno = input("Informe o email do aluno: ")
 
 aluno - session.query(Aluno).filter_by(email = email_aluno).first()
 
